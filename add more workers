@@ -1,0 +1,39 @@
+//SPDX-License-Identifier: MIT
+
+pragma solidity <=0.8.7;
+ 
+contract ophirdepartmentcontract {
+  /**
+  string public nameofdepartments = "IAAS";
+  uint256 public noofdepartments;
+  int public noofunfunctionaldepartments = 0;
+  bool public presenceofstudents = true;
+  address public mystoreaddress = 0xA6Da2d3Fe4BBc26F083d3C22739f82Ed493Bc955;
+  bytes public nameofdepartmentalpha = "IAAS";
+  **/
+
+
+  uint256 public noofworkers;
+   /**
+    Ophirinstitute public groupeddepartments = Ophirinstitute({noofOphirworkers: 5, nameofOphirdepartment: "IAAS"});
+    Ophirinstitute public groupeddepartments2 = Ophirinstitute({noofOphirworkers: 10, nameofOphirdepartment: "DeV101"});
+   **/
+
+   Ophirinstitute [] public ophirinstitute;
+
+   struct Ophirinstitute{
+      uint256 noofOphirworkers;
+      string  nameofOphirdepartments;
+   }
+
+  function storenoofworkers(uint256 _noofworkers) public {
+     noofworkers = _noofworkers;
+  }
+   function readnoofworkers() public view returns (uint256) {
+      return noofworkers;
+   }
+    function addgroupedOphirdepartments (string memory _nameofOphirdepartments, uint256 _noofOphirworkers) public {
+        Ophirinstitute memory newgroupedOphirdepartments = Ophirinstitute ({noofOphirworkers: _noofOphirworkers, nameofOphirdepartments : _nameofOphirdepartments});
+    }
+
+}
